@@ -1,0 +1,26 @@
+Server run at \\.\pipe\4f244d17-e413-40a5-b5ab-622fb7a6cf01
+[0mGET / [36m302 [0m47.728 ms - 54[0m
+MongoDB connected
+[0mGET /robots.txt [33m404 [0m58.548 ms - 1822[0m
+[0mGET /home [36m304 [0m5.202 ms - -[0m
+[0mGET /static/dist/deploy/app.minb432.css?rel=1591603433775 [36m304 [0m35.241 ms - -[0m
+[0mGET /static/dist/images/logo.png [36m304 [0m3.594 ms - -[0m
+[0mGET /static/dist/deploy/app.minf65b.js?rel=1591603433772 [36m304 [0m0.655 ms - -[0m
+[0mGET /images/captcha662b.png?v=5f08b1e1d93d63.97746823 [36m304 [0m1.616 ms - -[0m
+[0mGET /home/captcha?refresh=1&_=1603384304878 [33m404 [0m3.278 ms - 1822[0m
+[0mGET /favicon.ico [33m404 [0m1.827 ms - 1822[0m
+324856102011
+[0mPOST /home/search [32m200 [0m76.807 ms - 28152[0m
+[0mGET /static/dist/deploy/app.minb432.css?rel=1591603433775 [36m304 [0m1.508 ms - -[0m
+[0mGET /images/logo.png [36m304 [0m1.798 ms - -[0m
+[0mGET /static/dist/images/logo.png [36m304 [0m0.809 ms - -[0m
+[0mGET /images/img4.jpeg [36m304 [0m4.202 ms - -[0m
+[0mGET /static/dist/deploy/app.minf65b.js?rel=1591603433772 [36m304 [0m2.637 ms - -[0m
+[0mGET /home/captcha?refresh=1&_=1603384408577 [33m404 [0m4.316 ms - 1822[0m
+156894612356
+[0mPOST /home/search [32m200 [0m20.217 ms - 31716[0m
+[0mGET /static/dist/deploy/app.minb432.css?rel=1591603433775 [36m304 [0m1.490 ms - -[0m
+[0mGET /images/logo.png [36m304 [0m0.612 ms - -[0m
+[0mGET /static/dist/images/logo.png [36m304 [0m0.701 ms - -[0m
+[0mGET /images/img3.jpeg [36m304 [0m1.329 ms - -[0m
+[0mGET /static/dist/deploy/app.minf65b.js?rel=1591603433772 [36m304 [0m0.699 ms - -[0m

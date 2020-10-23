@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+<title>Home: The National Institute of Open Schooling (NIOS) </title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+
+    <link type="text/css" rel="stylesheet" href="/static/dist/deploy/app.minb432.css?rel=1591603433775" />
+</head>
+
+<body class="body ">
+    <header class="header">
+        <!-- Begin Bottom header section -->
+        <div class="mainHead hidden-print">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="mainHead__wrapper">
+                            <div class="mainHead__wrapper-logo">
+                                <figure>
+                                    <img src="/static/dist/images/logo.png" alt="National Institute of Open Learning"
+                                        class="img-responsive">
+                                </figure>
+                            </div>
+                            <div class="mainHead__wrapper-navigation hidden-print">
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                        <ul class="navigation__menu">
+                                            <li class="information">
+                                                For any technical query contact on <br>
+                                                <span class="fa fa-envelope"></span><a class="email_link"
+                                                    href="">lsc@nios.ac.in</a><br />
+                                                <span class="fa fa-phone"></span><a class="email_link">Toll
+                                                    Free:1800-180-9393</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mainHead__wrapper-toggle">
+                                <a href="javascript:;" class="open-menu">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bottom header section -->
+    </header>
+    <div class="clearfix"></div>
+    <div class="exam-wrapper">
+        <div class="container">
+            <div class="row result__form">
+                <div class="col-md-6 col-xs-10 col-centered">
+                    <div class="exam-wrapper__container">
+                        <div class="exam-wrapper--heading">
+                            <span class="logo">
+                                <img src="/static/dist/images/logo.png" alt="NIOS logo" class="img-responsive" />
+                            </span>
+                            ACADEMIC EXAMINATION RESULT
+
+                        </div>
+                        <div class="exam-wrapper__view">
+                            <div class="messages"></div>
+                            <form id="resultSearchForm" action="/home/search" method="post">
+                                <div class="form-group field-searchmodel-roll_number required">
+                                    <label class="control-label" for="searchmodel-roll_number">Enrollment Number</label>
+                                    <input type="text" id="searchmodel-roll_number" class="form-control"
+                                        name="roll_number" maxlength="12" autofocus autocomplete="off"
+                                        aria-required="true">
+
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                                <div class="form-group field-searchmodel-captcha required">
+
+                                    <img id="captcha-image" src="/images/captcha662b.png?v=5f08b1e1d93d63.97746823"
+                                        alt=""><input type="text" id="searchmodel-captcha"
+                                        class="form-control is__form__field" name="captcha" autofocus
+                                        aria-required="true"><button type="button" id="refresh-captcha"
+                                        class="refresh-captcha"><i class="fa fa-refresh"></i></button>
+
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                                <p style="margin-bottom:10px;">Enter your enrollment number and captcha to view the
+                                    result</p>
+                                <div class="hide">
+                                    <div class="form-group field-searchmodel-type">
+                                        <label class="control-label" for="searchmodel-type"></label>
+                                       
+
+                                        <p class="help-block help-block-error"></p>
+                                    </div>
+                                </div>
+
+                                <div class="button-set">
+                                    <button id="submitButton" type="submit" class="button small blue">Submit</button>
+                                    <button onclick="location.reload();" type="reset"
+                                        class="button small grey">Reset</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row hide result__view"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="float__wrapper hidden-print">
+        <a href="/home" class="pulse3"><span class="fa fa-home"></span></a>
+    </div>
+    <div class="backTo__top hidden-print">Top</div>
+    <!-- Begin footer section -->
+    <footer class="footer__wrapper hidden-print">
+        <div class="footer__wrapper-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer__wrapper-bottom-content">
+                            <div class="disclaimer">&copy; 2018 The National Institute of Open Schooling. All Rights
+                                Reserved.</div>
+                            <div class="links">
+                                <a href="https://www.nios.ac.in/terms-conditions.aspx">Disclaimer</a>
+                                <a href="https://www.nios.ac.in/sitemap.aspx">Sitemap</a>
+                                <a href="https://results.nios.ac.in/auth/login">Login</a>
+                                <a href="https://www.nios.ac.in/contact-us/headquarter.aspx">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- End footer section -->
+    <script type="text/javascript" src="/static/dist/deploy/app.minf65b.js?rel=1591603433772"></script>
+    <script type="text/javascript">
+        
+    </script>
+    <script>jQuery(function ($) {
+            jQuery('#captcha-image').yiiCaptcha({ "refreshUrl": "\/home\/captcha?refresh=1", "hashKey": "yiiCaptcha\/home\/captcha" });
+            jQuery('#resultSearchForm').yiiActiveForm([{ "id": "searchmodel-roll_number", "name": "roll_number", "container": ".field-searchmodel-roll_number", "input": "#searchmodel-roll_number", "error": ".help-block.help-block-error", "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Roll Number cannot be blank." }); yii.validation.string(value, messages, { "message": "Roll Number must be a string.", "max": 12, "tooLong": "Roll Number should contain at most 12 characters.", "skipOnEmpty": 1 }); } }, { "id": "searchmodel-captcha", "name": "captcha", "container": ".field-searchmodel-captcha", "input": "#searchmodel-captcha", "error": ".help-block.help-block-error", "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Captcha cannot be blank." }); yii.validation.captcha(value, messages, { "hash": 757, "hashKey": "yiiCaptcha/home/captcha", "caseSensitive": false, "message": "The captcha code is incorrect." }); } }], []);
+
+            $('#captcha-image').yiiCaptcha('refresh');
+            $('#refresh-captcha').on('click', function (e) {
+                e.preventDefault();
+                $('#captcha-image').yiiCaptcha('refresh');
+            })
+
+        });</script>
+</body>
+ 
+</html>

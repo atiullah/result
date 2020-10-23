@@ -1,0 +1,279 @@
+<%include ./sharedView/headCss%>
+
+<style>
+    label {
+        display: block;
+    }
+
+    input.error {
+        border: 1px solid red;
+    }
+
+    select.error {
+        border: 1px solid red;
+    }
+
+
+    label.error {
+        font-weight: normal;
+        color: red;
+    }
+</style>
+
+<body class="fixed-navbar">
+    <div class="page-wrapper">
+
+        <%include ./sharedView/header%>
+        <%include ./sharedView/sidebar%>
+
+        <div class="content-wrapper">
+            <!-- START PAGE CONTENT-->
+
+            <div class="page-content fade-in-up">
+                <div class="ibox">
+                    <div class="ibox-head">
+                        <div class="ibox-title">
+                            <h3>Add Student Result of Secondary & Senior Secondary </h3>
+                        </div>
+                        <a href="/admin/" class="btn btn-secondary pull-right">Back</a>
+                    </div>
+                    <div class="ibox-body">
+                        <form id="TCAddform" enctype="multipart/form-data" action="/TCAddPost" method="post">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Enrollment No<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="enrolId" name="enrolId">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Student Name<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="name" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Father Name<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="fatherName" name="fatherName">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Mother Name<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="motherName" name="motherName">
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">DOB<span
+                                                class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="dob" name="dob">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Exam Year<span
+                                                class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="examYear" name="examYear">
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+<hr>  <div class="ibox-head">
+    <div class="ibox-title">
+        <h3>Upload Student Marks </h3>
+    </div>
+     
+</div><br/>
+
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Student Standard<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-control" name="StudentStandard" id="StudentStandard">
+                                            <option value="">-- Select Your Student Standard --</option>
+                                            <option value="class1">Class I</option>
+                                            <option value="class2">Class II</option>
+                                            <option value="class3">Class III</option>
+                                            <option value="class4">class IV</option>
+                                            <option value="class5">Class V</option>
+                                            <option value="class6">Class VI</option>
+                                            <option value="class7">Class VII</option>
+                                            <option value="class8">Class VIII</option>
+                                            <option value="class9">Class IX</option>
+                                            <option value="class10">Class X</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Student Name<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="StudentName" name="StudentName">
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Student Image</label>
+                                        <input class="form-control form-control-line" id="studentImage" accept="image/*"
+                                            type="file" name="studentImage" placeholder="Photo" />
+                                        <span id="status1" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-lable">Student TC<span
+                                                class="text-danger">*</span></label>
+                                        <input class="form-control form-control-line" id="studentTCpdf" accept="image/*"
+                                            type="file" name="studentTCpdf" placeholder="Photo" />
+                                        <span id="status2" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4"></div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <button type="submit"
+                                            class="btn btn-block btn-rounded btn-primary pull-right">
+                                            Save Student Details</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+            <%include ./sharedView/footer%>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $("#TCAddform").validate({
+            rules: {
+                "studentId": {
+                    required: true,
+
+                },
+                "studentrollNo": {
+                    required: true,
+
+                },
+                "StudentStandard": {
+                    required: true,
+
+                },
+                "StudentName": {
+                    required: true,
+
+                },
+                "studentTCpdf": {
+                    required: true,
+
+                }
+            },
+
+        });
+
+    });
+
+</script>
+
+<script>
+    // var a = 'ProdCode-'+ Math.floor(Math.random() * 899999 + 1000000)
+    // console.log(a)
+    $('#studentTCpdf').bind('change', function () {
+        console.log(this)
+
+        console.log(this.files[0].type)
+        if (this.files[0].type == 'image/jpeg' || this.files[0].type == 'image/png' || this.files[0].type == 'image/gif' || this.files[0].type == 'application/pdf') {
+            if (this.files[0].size < 2000000) {
+                $('#status2').text('')
+            }
+            else {
+                // $('#status').text('PFile should be less than 2 mb')
+                $('#status2').text("File should be less than 2 mb")
+            }
+        }
+        else {
+            $('#status2').text("You should take only JPG or PNG or PDF format")
+        }
+
+    })
+
+    $('#studentImage').bind('change', function () {
+        console.log(this)
+        console.log(this.files[0].type)
+        if (this.files[0].type == 'image/jpeg' || this.files[0].type == 'image/png' || this.files[0].type == 'image/gif') {
+            if (this.files[0].size < 2000000) {
+                $('#status1').text('')
+            }
+            else {
+                // $('#status').text('PFile should be less than 2 mb')
+                $('#status1').text("You should take only JPG or PNG or PDF format")
+            }
+        }
+        else {
+            $('#status1').text("You should take only JPG or PNG or PDF format")
+        }
+
+    })
+
+
+    $('TCAddform').submit((event) => {
+        // alert($('#status').text())
+        if ($('#status1').text() == 'You should take only JPG or PNG or PDF format') {
+            event.preventDefault(); return
+        }
+        if ($('#status1').text() == 'File should be less than 2 mb') {
+            event.preventDefault(); return
+        }
+        if ($('#status2').text() == 'You should take only JPG or PNG or PDF format') {
+            event.preventDefault(); return
+        }
+        if ($('#status2').text() == 'File should be less than 2 mb') {
+            event.preventDefault(); return
+        }
+    })
+    $('form').submit(function (event) {
+
+    })
+</script>
+
+</html>
+<script src="/assets/js/lib1.js"></script>
+<script src="/assets/js/lib2.js"></script>
+<script src="/assets/js/custome.js"></script>
+<script src="/assets/js/main.js"></script>
