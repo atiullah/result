@@ -1,8 +1,0 @@
-Server run at \\.\pipe\aa1861bd-759a-40d4-ae54-19b3ce153afa
-MongoDB connected
-156894612356
-[0mPOST /home/search [32m200 [0m60.784 ms - 4184[0m
-[0mGET /static/dist/deploy/app.minb432.css?rel=1591603433775 [36m304 [0m4.955 ms - -[0m
-[0mGET /images/logo.png [32m200 [0m4.375 ms - 41609[0m
-[0mGET /static/dist/deploy/app.minf65b.js?rel=1591603433772 [36m304 [0m1.045 ms - -[0m
-[0mGET /home/captcha?refresh=1&_=1603255825636 [33m404 [0m10.592 ms - 1822[0m

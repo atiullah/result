@@ -1,3 +1,0 @@
-Server run at \\.\pipe\60e6c926-8b14-461d-b7ca-55f164b142d1
-MongoDB connected
-[0mGET / [36m302 [0m6.694 ms - 27[0m
