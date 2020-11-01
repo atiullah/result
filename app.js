@@ -11,6 +11,24 @@ var AdminRouter = require('./routes/admin.routes')
 var app = express();
 require('./model/dbCotext')
 // view engine setup
+const uri = "mongodb+srv://dbUser:dbUser@cluster0.uaksu.mongodb.net/Developer?retryWrites=true&w=majority;"
+const mongoose = require('mongoose');
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+const connection = mongoose.connection;
+connection.once('open', () => {
+    console.log("MongoDB database connection established successfully");
+}); 
+
+
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://dbUser:<password>@cluster0.uaksu.mongodb.net/<dbname>?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
