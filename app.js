@@ -61,8 +61,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var port = process.env.PORT || 9000
-app.listen(port, () => {
-  console.log('Server run at ' + port)
-})
+// var port = process.env.PORT || 9000
+// app.listen(port, () => {
+//   console.log('Server run at ' + port)
+// })
 module.exports = app;
